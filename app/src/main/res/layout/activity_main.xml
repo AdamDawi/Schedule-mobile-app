@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mm">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+        <ImageButton
+            android:id="@+id/settingsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_name"
+            android:layout_gravity="end"
+            android:background="@color/transparent"
+            android:paddingRight="15dp"></ImageButton>
+        </androidx.appcompat.widget.Toolbar>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/mainLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                tools:context=".MainActivity">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/top_background"
+                        android:gravity="center"
+                        android:text="Dzień" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/top_background"
+                        android:gravity="center"
+                        android:text="8 - 9" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/top_background"
+                        android:gravity="center"
+                        android:text="9 - 10" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/top_background"
+                        android:gravity="center"
+                        android:text="10 - 11" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/top_background"
+                        android:gravity="center"
+                        android:text="11 - 12" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/top_background"
+                        android:gravity="center"
+                        android:text="12 - 13" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/top_background"
+                        android:gravity="center"
+                        android:text="13 - 14" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/top_background"
+                        android:gravity="center"
+                        android:text="14 - 15" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/top_background"
+                        android:gravity="center"
+                        android:text="15 - 16" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/top_background"
+                        android:gravity="center"
+                        android:text="16 - 17" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/top_background"
+                        android:gravity="center"
+                        android:text="17 - 18" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/top_background"
+                        android:gravity="center"
+                        android:text="18 - 19" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/top_background"
+                        android:gravity="center"
+                        android:text="19 - 20" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/top_background"
+                        android:gravity="center"
+                        android:text="20 - 21" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="125dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/top_background"
+                        android:text="Poniedziałek" />
+
+                    <include
+                        android:id="@+id/m0"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/m1"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/m2"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/m3"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/m4"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/m5"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/m6"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/m7"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/m8"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/m9"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/m10"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/m11"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/m12"
+                        layout="@layout/cell" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="125dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/top_background"
+                        android:gravity="center"
+                        android:text="Wtorek" />
+
+                    <include
+                        android:id="@+id/t0"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/t1"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/t2"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/t3"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/t4"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/t5"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/t6"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/t7"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/t8"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/t9"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/t10"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/t11"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/t12"
+                        layout="@layout/cell" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="125dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/top_background"
+                        android:gravity="center"
+                        android:text="Środa" />
+
+                    <include
+                        android:id="@+id/w0"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/w1"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/w2"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/w3"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/w4"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/w5"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/w6"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/w7"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/w8"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/w9"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/w10"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/w11"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/w12"
+                        layout="@layout/cell" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="125dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/top_background"
+                        android:gravity="center"
+                        android:text="Czwartek" />
+
+                    <include
+                        android:id="@+id/th0"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/th1"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/th2"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/th3"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/th4"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/th5"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/th6"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/th7"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/th8"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/th9"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/th10"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/th11"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/th12"
+                        layout="@layout/cell" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="125dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/top_background"
+                        android:gravity="center"
+                        android:text="Piątek" />
+
+                    <include
+                        android:id="@+id/f0"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/f1"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/f2"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/f3"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/f4"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/f5"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/f6"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/f7"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/f8"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/f9"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/f10"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/f11"
+                        layout="@layout/cell" />
+
+                    <include
+                        android:id="@+id/f12"
+                        layout="@layout/cell" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </HorizontalScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>
