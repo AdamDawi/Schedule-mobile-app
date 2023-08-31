@@ -12,6 +12,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
@@ -29,7 +30,7 @@ import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity
 {
-    String urlSite = "http://planwe.pollub.pl/plan.php?type=0&id=12791&winW=1904&winH=947&loadBG=000000";
+    String urlSite;
     TextView[] mondayCells, tuesdayCells, wednesdayCells, thursdayCells, fridayCells;
 
     @Override
@@ -39,6 +40,8 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         ExecutorService executor = Executors.newSingleThreadExecutor(); //new thread to perform async
+
+        loadUrl();
 
         setCellsIds();
 
@@ -54,7 +57,7 @@ public class MainActivity extends AppCompatActivity
         });
 
         CompletableFuture<Void> future = CompletableFuture.runAsync(() -> {
-            getContentFromWebsite(urlSite);
+            getContentFromWebsite();
         }, executor);
 
         future.whenComplete((result, exception) -> {
@@ -62,7 +65,7 @@ public class MainActivity extends AppCompatActivity
         });
     }
 
-    public void getContentFromWebsite(String url)
+    public void getContentFromWebsite()
     {
         String colorBackground="";
         String courseName;
@@ -77,7 +80,7 @@ public class MainActivity extends AppCompatActivity
 
 
         try {
-            Document document = Jsoup.connect(url).get();
+            Document document = Jsoup.connect(urlSite).get();
             Elements divElements = document.select("div.coursediv");//take all classes from the plan
 
 
@@ -347,11 +350,13 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(DialogInterface dialog, int which) {
 
-                String url = input.getText().toString();
+                urlSite = input.getText().toString();
 
-                if(url.contains("http://planwe.pollub.pl/plan.php?type="))
+                saveUrl();
+
+                if(urlSite.contains("http://planwe.pollub.pl/plan.php?type="))
                 {
-                    reloadLayout(url);
+                    reloadLayout();
                 }
                 else toastMessage("Niepoprawny link do planu zajęć");
             }
@@ -374,7 +379,7 @@ public class MainActivity extends AppCompatActivity
         });
     }
 
-    public void reloadLayout(String url)
+    public void reloadLayout()
     {
         RelativeLayout mainLayout = findViewById(R.id.mm);
         mainLayout.removeAllViews();
@@ -407,7 +412,7 @@ public class MainActivity extends AppCompatActivity
         ExecutorService executor = Executors.newSingleThreadExecutor(); //new thread to perform async
 
         CompletableFuture<Void> future = CompletableFuture.runAsync(() -> {
-            getContentFromWebsite(url);
+            getContentFromWebsite();
         }, executor);
 
         future.whenComplete((result, exception) -> {
@@ -425,6 +430,25 @@ public class MainActivity extends AppCompatActivity
     private ViewGroup inflateLayout(int layoutResId) {
         LayoutInflater inflater = LayoutInflater.from(this);
         return (ViewGroup) inflater.inflate(layoutResId, null);
+    }
+
+    public void saveUrl() //saving in private
+    {
+
+        SharedPreferences preferences = getSharedPreferences("my_preferences", MODE_PRIVATE);
+
+        SharedPreferences.Editor editor = preferences.edit();
+
+        editor.putString("current_url", urlSite);
+
+        editor.apply();
+    }
+
+    public void loadUrl()
+    {
+        SharedPreferences preferences = getSharedPreferences("my_preferences", MODE_PRIVATE);
+
+        urlSite = preferences.getString("current_url", "http://planwe.pollub.pl/plan.php?type=0&id=12791&winW=1904&winH=947&loadBG=000000");
     }
 }
 
