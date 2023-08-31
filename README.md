@@ -3,6 +3,7 @@
 - Getting schedule from http://planwe.pollub.pl/
 - You can choose any schedule from full-time studies
 - Changing schedule easily with button options and putting link for plan from website
+- Click on the course provides to details about it
 
 ### Getting Started
 To use the application you must have internet connection, otherwise you will get error mesagge. Next, if you have connetion, you see one of the plans from http://planwe.pollub.pl/ website. You can change it by clicking settings button.
