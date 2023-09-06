@@ -8,8 +8,8 @@
 ### Getting Started
 To use the application you must have internet connection, otherwise you will get error mesagge. Next, if you have connetion, you see one of the plans from http://planwe.pollub.pl/ website. You can change it by clicking settings button.
 
- ### Technologies Used
- The application is built using the following technologies:
+### Technologies Used
+The application is built using the following technologies:
 
 - Jsoup(for html requests)
 - Android Studio
