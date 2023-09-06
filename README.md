@@ -17,6 +17,6 @@ The application is built using the following technologies:
 
 ### Here are some pictures of the mobile application:
 
-![Screenshot_20230831-202423_Schedule_Easy-Resize com](https://github.com/AdamDawi/Schedule-mobile-app/assets/49430055/e2141930-d0c7-4e0c-b740-416ecdb88cac)
-![Screenshot_20230831-202426_Schedule_Easy-Resize com](https://github.com/AdamDawi/Schedule-mobile-app/assets/49430055/0f010b0e-10ae-4497-9a33-0d8bbb37a88e)
-![Screenshot_20230831-202429_Schedule_Easy-Resize com](https://github.com/AdamDawi/Schedule-mobile-app/assets/49430055/f23b7fe7-eac2-4d7b-a327-ae17cf134485)
+![image](https://github.com/AdamDawi/Schedule-mobile-app/assets/49430055/e2141930-d0c7-4e0c-b740-416ecdb88cac)
+![image](https://github.com/AdamDawi/Schedule-mobile-app/assets/49430055/0f010b0e-10ae-4497-9a33-0d8bbb37a88e)
+![image](https://github.com/AdamDawi/Schedule-mobile-app/assets/49430055/f23b7fe7-eac2-4d7b-a327-ae17cf134485)
