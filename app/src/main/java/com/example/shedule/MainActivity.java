@@ -16,6 +16,7 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -88,6 +89,7 @@ public class MainActivity extends AppCompatActivity
 
                 if (divElement.id().equals("testBox"))
                     continue; //last element in this elements is useless
+                if(!divElement.ownText().contains(",")) continue; //this cant be splited because it is unique course
 
                 String styleAttribute = divElement.attr("style");
                 String[] styleParts = styleAttribute.split(";");
@@ -106,7 +108,6 @@ public class MainActivity extends AppCompatActivity
 
                 //declare informations must be in this loop
                 String[] informations  = new String[3]; //[0]=name, [1]=room, [2]=type of course and hours
-
                 courseName = divElement.ownText().split(",")[0];
                 details = divElement.ownText().substring(courseName.length() + 2);
                 informations[2] = details;
@@ -448,7 +449,7 @@ public class MainActivity extends AppCompatActivity
     {
         SharedPreferences preferences = getSharedPreferences("my_preferences", MODE_PRIVATE);
 
-        urlSite = preferences.getString("current_url", "http://planwe.pollub.pl/plan.php?type=0&id=12791&winW=1904&winH=947&loadBG=000000");
+        urlSite = preferences.getString("current_url", "http://planwe.pollub.pl/plan.php?type=0&id=9968&winW=1904&winH=947&loadBG=000000");
     }
 }
 
