@@ -20,4 +20,3 @@ The application is built using the following technologies:
 ![image](https://github.com/AdamDawi/Schedule-mobile-app/assets/49430055/e2141930-d0c7-4e0c-b740-416ecdb88cac)
 ![image](https://github.com/AdamDawi/Schedule-mobile-app/assets/49430055/0f010b0e-10ae-4497-9a33-0d8bbb37a88e)
 ![image](https://github.com/AdamDawi/Schedule-mobile-app/assets/49430055/f23b7fe7-eac2-4d7b-a327-ae17cf134485)
-
