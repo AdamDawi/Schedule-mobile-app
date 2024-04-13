@@ -1,4 +1,4 @@
-# Schedule-mobile-app
+# <img src="https://github.com/AdamDawi/Real-chat-room/assets/49430055/397298de-d3d7-4505-9c91-e842c21e2a04" width="60" height="60" align="center" /> Schedule-mobile-app
 ### This is mobile application for schedule with the following features:
 - Getting schedule from http://planwe.pollub.pl/
 - You can choose any schedule from full-time studies
